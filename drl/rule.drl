@@ -1,0 +1,30 @@
+import jp.projects.miya.drools_hadoop.FactData;
+
+global java.util.List list
+
+dialect "mvel"
+
+rule "type1"
+	when
+		d : FactData(d.type == "xY")
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "type2"
+	when
+		d : FactData(d.type == "Xy")
+	then
+		d.value = "width:" + d.width + " > height:" + d.height;
+end
+rule "type3"
+	when
+		d : FactData(d.type == "XY")
+	then
+		d.value = "width:" + d.width + " == height:" + d.height;
+end
+rule "type4"
+	when
+		d : FactData(d.type not in ("xY", "Xy", "XY") )
+	then
+		d.value = "width:" + d.width + " : height:" + d.height;
+end
