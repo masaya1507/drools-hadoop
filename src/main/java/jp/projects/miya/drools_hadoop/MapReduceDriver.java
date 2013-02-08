@@ -1,11 +1,11 @@
 package jp.projects.miya.drools_hadoop;
 
 import java.io.IOException;
-import java.net.URI;
-import java.util.ArrayList;
+import java.io.InputStream;
 import java.util.Collection;
 import java.util.Properties;
 
+import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.conf.Configured;
 import org.apache.hadoop.filecache.DistributedCache;
 import org.apache.hadoop.fs.Path;
@@ -63,21 +63,24 @@ public class MapReduceDriver extends Configured implements Tool {
 
 			kbuilder = KnowledgeBuilderFactory.newKnowledgeBuilder(cfg);
 
-			URI[] uriList = DistributedCache.getCacheFiles(context.getConfiguration());
-			for (URI uri : uriList) {
-				Resource res = ResourceFactory.newFileResource(uri.getPath());
+			Configuration conf = context.getConfiguration();
+			Path[] pathList = DistributedCache.getLocalCacheFiles(context.getConfiguration());
+			for (Path path : pathList) {
 				ResourceType t = null;
-
-				if (uri.getPath().endsWith("drl")) {
+				
+				if (path.toString().endsWith("drl")) {
 					t = ResourceType.DRL;
-				} else if (uri.getPath().endsWith("pkg")) {
+				} else if (path.toString().endsWith("pkg")) {
 					t = ResourceType.PKG;
 				} else {
-					throw new RuntimeException("specified illeagal format rule file.");
+					continue;
 				}
-				kbuilder.add(res, t);
-			}
 
+				InputStream is = Utils.getDistributedCacheInputStream(conf, path);
+				Resource res = ResourceFactory.newInputStreamResource(is);
+				kbuilder.add(res, t);
+				is.close();
+			}
 			if (kbuilder.hasErrors()) {
 				throw new RuntimeException("Unable to compile rule file:" + kbuilder.getErrors().toString());
 			}
@@ -88,7 +91,6 @@ public class MapReduceDriver extends Configured implements Tool {
 			kbase.addKnowledgePackages(pkgs);
 
 			this.ksession = kbase.newStatefulKnowledgeSession();
-			this.ksession.setGlobal("list", new ArrayList<Object>());
 		}
 
 		/*

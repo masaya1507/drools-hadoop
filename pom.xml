@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>jp.projects.miya</groupId>
-	<artifactId>drools-hadoop</artifactId>
+	<artifactId>sample</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>drools-hadoop</name>
+	<name>sample</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
@@ -20,6 +20,11 @@
 			<id>JBossRepo</id>
 			<url>http://repository.jboss.com/maven2/</url>
 		</repository>
+		<repository>
+			<id>Cloudera</id>
+			<url>https://repository.cloudera.com/artifactory/cloudera-repos/</url>
+		</repository>
+
 	</repositories>
 
 	<dependencies>
@@ -27,7 +32,7 @@
 			<groupId>org.apache.hadoop</groupId>
 			<artifactId>hadoop-core</artifactId>
 			<!-- <version>1.0.0</version> -->
-			<version>0.20.2</version>
+			<version>0.20.2-cdh3u5</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>

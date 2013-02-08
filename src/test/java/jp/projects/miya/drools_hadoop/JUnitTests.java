@@ -1,5 +1,7 @@
 package jp.projects.miya.drools_hadoop;
 
+import jp.projects.miya.drools_builder.DrlMaker;
+
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
@@ -8,10 +10,10 @@ import org.junit.Test;
 /**
  * Unit test for MapReduceDriver.
  */
-public class MapReduceDriverTest
+public class JUnitTests
 {
 	@Test
-	public void testDrls() throws Exception {
+	public void testMapReduceJob() throws Exception {
 		String drlDir = "/Users/mbp_user/devel/java/drools-hadoop/drl/";
 		String hdfsOut = "output";
 
@@ -25,5 +27,11 @@ public class MapReduceDriverTest
 				"output"
 				}
 		);
+	}
+
+	@Test
+	public void testDrlWriter() throws Exception {
+		String drlDir = "/Users/mbp_user/devel/java/drools-hadoop/drl/";
+		DrlMaker.main(new String[] {drlDir, "100"});
 	}
 }

@@ -1,0 +1,606 @@
+package jp.projects.miya.drools_hadoop;
+
+import jp.projects.miya.drools_hadoop.FactData;
+
+dialect "mvel"
+
+rule "rule-1"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-2"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-3"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-4"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-5"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-6"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-7"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-8"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-9"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-10"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-11"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-12"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-13"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-14"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-15"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-16"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-17"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-18"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-19"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-20"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-21"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-22"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-23"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-24"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-25"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-26"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-27"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-28"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-29"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-30"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-31"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-32"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-33"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-34"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-35"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-36"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-37"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-38"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-39"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-40"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-41"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-42"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-43"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-44"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-45"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-46"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-47"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-48"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-49"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-50"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-51"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-52"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-53"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-54"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-55"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-56"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-57"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-58"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-59"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-60"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-61"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-62"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-63"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-64"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-65"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-66"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-67"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-68"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-69"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-70"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-71"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-72"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-73"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-74"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-75"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-76"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-77"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-78"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-79"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-80"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-81"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-82"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-83"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-84"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-85"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-86"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-87"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-88"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-89"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-90"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-91"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-92"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-93"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-94"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-95"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-96"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-97"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-98"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-99"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
+rule "rule-100"
+	when
+		t : FactData( d.type == "xY" )
+	then
+		d.value = "width:" + d.width + " < height:" + d.height;
+end
