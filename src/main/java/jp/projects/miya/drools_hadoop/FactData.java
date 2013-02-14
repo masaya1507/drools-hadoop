@@ -2,17 +2,17 @@ package jp.projects.miya.drools_hadoop;
 
 
 public class FactData {
-	private String type;
+	private String id;
 	private String name;
 	private String rate;
-	private String value;
-	private String width;
-	private String height;
-	public String getType() {
-		return type;
+	private String value1;
+	private String value2;
+	private String result;
+	public String getId() {
+		return id;
 	}
-	public void setType(String type) {
-		this.type = type;
+	public void setId(String id) {
+		this.id = id;
 	}
 	public String getName() {
 		return name;
@@ -20,28 +20,28 @@ public class FactData {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getValue() {
-		return value;
-	}
-	public void setValue(String value) {
-		this.value = value;
-	}
-	public String getWidth() {
-		return width;
-	}
-	public void setWidth(String width) {
-		this.width = width;
-	}
-	public String getHeight() {
-		return height;
-	}
-	public void setHeight(String height) {
-		this.height = height;
-	}
 	public String getRate() {
 		return rate;
 	}
 	public void setRate(String rate) {
 		this.rate = rate;
+	}
+	public String getValue1() {
+		return value1;
+	}
+	public void setValue1(String value1) {
+		this.value1 = value1;
+	}
+	public String getValue2() {
+		return value2;
+	}
+	public void setValue2(String value2) {
+		this.value2 = value2;
+	}
+	public String getResult() {
+		return result;
+	}
+	public void setResult(String result) {
+		this.result = result;
 	}
 }

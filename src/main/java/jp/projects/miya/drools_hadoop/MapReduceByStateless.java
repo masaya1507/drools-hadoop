@@ -29,16 +29,15 @@ import org.drools.definition.KnowledgePackage;
 import org.drools.io.Resource;
 import org.drools.io.ResourceFactory;
 import org.drools.rule.builder.dialect.java.JavaDialectConfiguration;
-import org.drools.runtime.StatefulKnowledgeSession;
-import org.drools.runtime.rule.FactHandle;
+import org.drools.runtime.StatelessKnowledgeSession;
 
 import au.com.bytecode.opencsv.CSVParser;
 
-public class MapReduceDriver extends Configured implements Tool {
+public class MapReduceByStateless extends Configured implements Tool {
 	public static class Map extends
 			Mapper<LongWritable, Text, Text, Text> {
 
-		private StatefulKnowledgeSession ksession;
+		private StatelessKnowledgeSession ksession;
 		private CSVParser parser;
 
 		/*
@@ -66,19 +65,13 @@ public class MapReduceDriver extends Configured implements Tool {
 			Configuration conf = context.getConfiguration();
 			Path[] pathList = DistributedCache.getLocalCacheFiles(context.getConfiguration());
 			for (Path path : pathList) {
-				ResourceType t = null;
-				
-				if (path.toString().endsWith("drl")) {
-					t = ResourceType.DRL;
-				} else if (path.toString().endsWith("pkg")) {
-					t = ResourceType.PKG;
-				} else {
+				if (!path.toString().endsWith("drl")) {
 					continue;
 				}
 
 				InputStream is = Utils.getDistributedCacheInputStream(conf, path);
 				Resource res = ResourceFactory.newInputStreamResource(is);
-				kbuilder.add(res, t);
+				kbuilder.add(res, ResourceType.DRL);
 				is.close();
 			}
 			if (kbuilder.hasErrors()) {
@@ -90,7 +83,7 @@ public class MapReduceDriver extends Configured implements Tool {
 			final KnowledgeBase kbase = KnowledgeBaseFactory.newKnowledgeBase();
 			kbase.addKnowledgePackages(pkgs);
 
-			this.ksession = kbase.newStatefulKnowledgeSession();
+			this.ksession = kbase.newStatelessKnowledgeSession();
 		}
 
 		/*
@@ -100,7 +93,7 @@ public class MapReduceDriver extends Configured implements Tool {
 		@Override
 		protected void cleanup(Context context) throws IOException,
 				InterruptedException {
-			this.ksession.dispose();
+			this.ksession = null;
 		}
 
 		/*
@@ -116,17 +109,15 @@ public class MapReduceDriver extends Configured implements Tool {
 
 				if (fields.length == 5) {
 					FactData data = new FactData();
-					data.setType(fields[0]);
+					data.setId(fields[0]);
 					data.setName(fields[1]);
 					data.setRate(fields[2]);
-					data.setWidth(fields[3]);
-					data.setHeight(fields[4]);
+					data.setValue1(fields[3]);
+					data.setValue2(fields[4]);
 
-					FactHandle hd = this.ksession.insert(data);
-					this.ksession.fireAllRules();
-					this.ksession.retract(hd);
+					this.ksession.execute(data);
 
-					context.write(new Text(data.getType()), new Text(data.getValue()));
+					context.write(new Text(data.getId()), new Text(data.getResult()));
 				} else {
 					throw new Exception("Illeagal record format exists.");
 				}
@@ -148,10 +139,7 @@ public class MapReduceDriver extends Configured implements Tool {
 			return -1;
 		} else {
 			Job job = new Job(this.getConf());
-			job.setJarByClass(MapReduceDriver.class);
-
-			job.setOutputKeyClass(Text.class);
-			job.setOutputValueClass(Text.class);
+			job.setJarByClass(MapReduceByStateless.class);
 
 			job.setMapperClass(Map.class);
 			job.setNumReduceTasks(0);
@@ -173,7 +161,7 @@ public class MapReduceDriver extends Configured implements Tool {
 	 * @throws Exception
 	 */
 	public static void main(String[] args) throws Exception {
-		int ret = ToolRunner.run(new MapReduceDriver(), args);
+		int ret = ToolRunner.run(new MapReduceByStateless(), args);
 		System.exit(ret);
 	}
 
