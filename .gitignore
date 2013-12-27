@@ -1,6 +1,3 @@
 target/
 output/
 .DS_Store
-.classpath
-.project
-.settings/
