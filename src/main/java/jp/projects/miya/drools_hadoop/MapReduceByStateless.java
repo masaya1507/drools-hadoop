@@ -47,6 +47,8 @@ public class MapReduceByStateless extends Configured implements Tool {
 		@Override
 		protected void setup(Context context) throws IOException,
 				InterruptedException {
+			//
+			OptimizerFactory.setDefaultOptimizer(OptimizerFactory.SAFE_REFLECTIVE);
 
 			this.parser = new CSVParser(',', '"');
 
