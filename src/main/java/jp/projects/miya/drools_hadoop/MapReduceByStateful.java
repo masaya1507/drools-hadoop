@@ -31,6 +31,7 @@ import org.drools.io.ResourceFactory;
 import org.drools.rule.builder.dialect.java.JavaDialectConfiguration;
 import org.drools.runtime.StatefulKnowledgeSession;
 import org.drools.runtime.rule.FactHandle;
+import org.mvel2.optimizers.OptimizerFactory;
 
 import au.com.bytecode.opencsv.CSVParser;
 
